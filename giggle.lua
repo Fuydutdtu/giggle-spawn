@@ -67,7 +67,9 @@ local Character = Player.Character
 local Camera = workspace.CurrentCamera
 
 local ModuleScripts = {
-MainGame = require(Player.PlayerGui.MainUI.Initiator.Main_Game),
+local playerGui = localPlayer.PlayerGui
+local mainUI = playerGui:WaitForChild("MainUI")
+local mainGame = mainUI:WaitForChild("Initiator"):WaitForChild("Main_Game")
 Events = require(game:GetService("ReplicatedStorage").ClientModules.Module_Events),
 }
 
