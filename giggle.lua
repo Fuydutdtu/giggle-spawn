@@ -3,6 +3,8 @@
 -- Version: V2
 
 -- written in mobile (my fingers dont hurt luckily
+local playerGui = localPlayer.PlayerGui
+local mainUI = playerGui:WaitForChild("MainUI")
 
 function Load(URL, AssetName)
     local Asset = game:GetObjects(URL)[1]
@@ -67,9 +69,7 @@ local Character = Player.Character
 local Camera = workspace.CurrentCamera
 
 local ModuleScripts = {
-local playerGui = localPlayer.PlayerGui
-local mainUI = playerGui:WaitForChild("MainUI")
-local mainGame = mainUI:WaitForChild("Initiator"):WaitForChild("Main_Game")
+MainGame = mainUI:WaitForChild("Initiator"):WaitForChild("Main_Game")
 Events = require(game:GetService("ReplicatedStorage").ClientModules.Module_Events),
 }
 
